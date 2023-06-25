@@ -1,4 +1,10 @@
 # объединил все данные в один файл k1 (временно!) что бы каждый раз не переписывать файлы
 # Сделать фильтрацию
+import pandas as pd
 
-# def filter(general_data):
+k = pd.read_csv('k1.csv', encoding="utf-8", delimiter=';')
+
+k = k[['Дата выполнения ЗК','ФИО курьера']]
+k = k.groupby(['Дата выполнения ЗК','ФИО курьера']).size()
+print(type(k))
+print(k)
