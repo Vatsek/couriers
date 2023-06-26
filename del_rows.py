@@ -5,6 +5,6 @@ def delRows(file):
         for line in data:
             count += 1
             if count > 7:
-                result = line.split(';')
+                result = line
                 new_list.append(result)
         return new_list
