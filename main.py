@@ -7,6 +7,7 @@ from filter import filter
 
 # создаем список файлов --- готово !!!!!!!!!!!
 files_lst = create_files_list()
+print(files_lst)
 
 
 # удаляем во всех файлах шапку  --- готово!!!!!!!!!!!!!!!
