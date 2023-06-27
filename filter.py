@@ -1,10 +1,5 @@
-# объединил все данные в один файл k1 (временно!) что бы каждый раз не переписывать файлы
-# Сделать фильтрацию
-import pandas as pd
-
-k = pd.read_csv('k1.csv', encoding="utf-8", delimiter=';')
-
-k = k[['Дата выполнения ЗК','ФИО курьера']]
-k = k.groupby(['Дата выполнения ЗК','ФИО курьера']).size()
-print(type(k))
-print(k)
+def filter(dataFrame):
+    dataFrame = dataFrame.drop_duplicates(['Номер ЗК'])
+    dataFrame = dataFrame.loc[dataFrame['ФИО курьера'].isin(['Брагин Антон Владимирович', 'Малышев Станислав Борисович', 'Круглов Сергей Анатольевич'])]
+    dataFrame = dataFrame.groupby(['Дата выполнения ЗК','ФИО курьера']).size()
+    return dataFrame
