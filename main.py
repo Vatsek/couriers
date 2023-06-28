@@ -4,27 +4,32 @@ from create_file import create_file
 from create_files_list import create_files_list
 from save_to_file import save_to_file
 from filter import filter
+import time
 
-# создаем список файлов --- готово !!!!!!!!!!!
+
+
+# создаем список файлов
 files_lst = create_files_list()
-print(files_lst)
 
 
-# удаляем во всех файлах шапку  --- готово!!!!!!!!!!!!!!!
+
+# удаляем во всех файлах шапку
 for i in files_lst:
     create_file(delRows(i), i)
 
-test = delColumns(files_lst) # вроде как работает. Возвращает список из data !!
-# print(test)
+test = delColumns(files_lst) # Возвращает список из data !!
 
 
-# # # объединяем все dataFrame в единое целое. Вроде как работает!
+
+# # # объединяем все dataFrame в единое целое.
 result = pd.DataFrame()
 for i in test:
     result = pd.concat([result, i])
 
 result = filter(result)
-print(result)
 save_to_file(result)
+print('complete')
+
+
 
 
