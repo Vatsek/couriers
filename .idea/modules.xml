@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/couriers.iml" filepath="$PROJECT_DIR$/.idea/couriers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/menu_couriers.iml" filepath="$PROJECT_DIR$/.idea/menu_couriers.iml" />
     </modules>
   </component>
 </project>
